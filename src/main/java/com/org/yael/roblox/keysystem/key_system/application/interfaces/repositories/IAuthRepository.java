@@ -1,4 +1,4 @@
-package com.org.yael.roblox.keysystem.key_system.application.interfaces.auth;
+package com.org.yael.roblox.keysystem.key_system.application.interfaces.repositories;
 
 import com.org.yael.roblox.keysystem.key_system.application.dtos.auth.CreateUserDto;
 import com.org.yael.roblox.keysystem.key_system.application.dtos.auth.UserDto;

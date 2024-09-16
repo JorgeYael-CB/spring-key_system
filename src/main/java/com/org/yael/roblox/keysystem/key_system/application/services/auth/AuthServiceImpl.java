@@ -5,8 +5,8 @@ import org.springframework.stereotype.Service;
 
 import com.org.yael.roblox.keysystem.key_system.application.dtos.auth.CreateUserDto;
 import com.org.yael.roblox.keysystem.key_system.application.dtos.auth.UserDto;
-import com.org.yael.roblox.keysystem.key_system.application.interfaces.auth.IAuthRepository;
-import com.org.yael.roblox.keysystem.key_system.application.interfaces.auth.IAuthService;
+import com.org.yael.roblox.keysystem.key_system.application.interfaces.repositories.IAuthRepository;
+import com.org.yael.roblox.keysystem.key_system.application.interfaces.useCases.IAuthService;
 import com.org.yael.roblox.keysystem.key_system.application.services.ResponseService;
 
 

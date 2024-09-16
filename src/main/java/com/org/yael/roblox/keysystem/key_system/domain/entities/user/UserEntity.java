@@ -6,18 +6,19 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+import com.org.yael.roblox.keysystem.key_system.domain.entities.Entity;
+import com.org.yael.roblox.keysystem.key_system.domain.entities.scripts.ScriptEntity;
 
 
-public class UserEntity {
+
+public class UserEntity extends Entity {
     private String name;
     private Optional<String> email;
-    private String id;
     private int robloxId;
-    private Date updatedAt = new Date();
-    private Date createdAt = new Date();
     private List<String> roles = new ArrayList<>(Arrays.asList("USER"));
-    private boolean isActive = true;
     private Date lastConnection = new Date();
+    private List<ScriptEntity> myScripts = new ArrayList<>();
+    private List<ScriptEntity> scriptsUsed = new ArrayList<>();
 
 
 
@@ -33,29 +34,11 @@ public class UserEntity {
     public void setEmail(Optional<String> email) {
         this.email = email;
     }
-    public String getId() {
-        return id;
-    }
-    public void setId(String id) {
-        this.id = id;
-    }
     public int getRobloxId() {
         return robloxId;
     }
     public void setRobloxId(int robloxId) {
         this.robloxId = robloxId;
-    }
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
     }
     public List<String> getRoles() {
         return roles;
@@ -63,17 +46,27 @@ public class UserEntity {
     public void setRoles(List<String> roles) {
         this.roles = roles;
     }
-    public boolean isActive() {
-        return isActive;
-    }
-    public void setActive(boolean isActive) {
-        this.isActive = isActive;
-    }
     public Date getLastConnection() {
         return lastConnection;
     }
     public void setLastConnection(Date lastConnection) {
         this.lastConnection = lastConnection;
+    }
+
+    public List<ScriptEntity> getScripts() {
+        return myScripts;
+    }
+
+    public void setScripts(List<ScriptEntity> myScript) {
+        this.myScripts = myScript;
+    }
+
+    public List<ScriptEntity> getScriptsUsed() {
+        return scriptsUsed;
+    }
+
+    public void setScriptsUsed(List<ScriptEntity> scriptsUsed) {
+        this.scriptsUsed = scriptsUsed;
     }
 
 }
