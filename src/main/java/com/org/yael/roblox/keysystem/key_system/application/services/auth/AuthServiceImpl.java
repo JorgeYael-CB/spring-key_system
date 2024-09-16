@@ -22,7 +22,6 @@ public class AuthServiceImpl implements IAuthService {
     public ResponseService<UserDto> CreateKey(CreateUserDto userDto) {
         UserDto user = authRepository.CreateUser(userDto);
 
-        //TODO: llamar al servicio del token
         String token = "Token";
 
         ResponseService<UserDto> response = new ResponseService<>();

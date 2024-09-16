@@ -1,5 +1,7 @@
 package com.org.yael.roblox.keysystem.key_system.domain.entities.user;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -13,7 +15,7 @@ public class UserEntity {
     private int robloxId;
     private Date updatedAt = new Date();
     private Date createdAt = new Date();
-    private List<String> roles;
+    private List<String> roles = new ArrayList<>(Arrays.asList("USER"));
     private boolean isActive = true;
     private Date lastConnection = new Date();
 
@@ -74,6 +76,4 @@ public class UserEntity {
         this.lastConnection = lastConnection;
     }
 
-
-    
 }

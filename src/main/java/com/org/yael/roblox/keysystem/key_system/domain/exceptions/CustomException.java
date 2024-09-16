@@ -4,8 +4,8 @@ package com.org.yael.roblox.keysystem.key_system.domain.exceptions;
 
 public class CustomException extends RuntimeException {
 
-    private String error;
-    private int status;
+    private final String error;
+    private final int status;
 
     private CustomException( String error, int status ){
         super(error);
@@ -23,7 +23,6 @@ public class CustomException extends RuntimeException {
     }
 
     public static CustomException InternalServerError( String error ){
-        //TODO: usar un logger para manejar los errores no controlados
         System.out.println(error);
         return new CustomException("Unexpected error, please try again later", 500);
     }
